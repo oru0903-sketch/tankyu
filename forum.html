@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="学習に関する質問を投稿・閲覧できるフォーラム">
+    <title>フォーラム | Tanet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="forum.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Tanet</span>
+            </a>
+            <div class="nav-links">
+                <a href="diagnosis.html" class="nav-link">診断する</a>
+                <a href="live-select.html" class="nav-link">ライブ授業</a>
+                <a href="dashboard.html" class="nav-link">マイページ</a>
+                <a href="forum.html" class="nav-link active">フォーラム</a>
+            </div>
+            <div class="nav-user">
+                <span class="user-avatar">👤</span>
+                <span class="user-name">ゲスト</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Forum Container -->
+    <div class="forum-container container">
+        <!-- Page Header -->
+        <div class="forum-header">
+            <h1>学習フォーラム</h1>
+            <p>勉強や将来のキャリアについて、みんなで質問・回答しよう</p>
+        </div>
+
+        <!-- Action Bar -->
+        <div class="forum-actions">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" placeholder="質問を検索...">
+            </div>
+            <button class="btn btn-primary" id="new-question-btn">
+                <span>➕</span>
+                質問を投稿
+            </button>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="forum-filters">
+            <button class="filter-tab active" data-filter="all">すべて</button>
+            <button class="filter-tab" data-filter="career">キャリア・進路</button>
+            <button class="filter-tab" data-filter="study">勉強法</button>
+            <button class="filter-tab" data-filter="motivation">モチベーション</button>
+            <button class="filter-tab" data-filter="subject">科目別</button>
+        </div>
+
+        <!-- Questions List -->
+        <div class="questions-list">
+            <!-- Question Card 1 -->
+            <div class="question-card" data-category="career">
+                <div class="question-main">
+                    <div class="question-avatar">👤</div>
+                    <div class="question-content">
+                        <div class="question-meta">
+                            <span class="question-author">田中 太郎</span>
+                            <span class="question-tag career">キャリア・進路</span>
+                            <span class="question-time">2時間前</span>
+                        </div>
+                        <h3 class="question-title">数学は将来どの業種に役に立ちますか?</h3>
+                        <p class="question-body">
+                            高校2年生です。数学が苦手で、将来どんな仕事で使うのかイメージできません。
+                            具体的にどんな業種や職種で数学の知識が活かせるのか教えてください。
+                        </p>
+                        <div class="question-footer">
+                            <button class="action-btn">
+                                <span>👍</span>
+                                <span>15</span>
+                            </button>
+                            <button class="action-btn">
+                                <span>💬</span>
+                                <span>8件の回答</span>
+                            </button>
+                            <button class="action-btn">
+                                <span>🔖</span>
+                                保存
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Top Answer Preview -->
+                <div class="answer-preview">
+                    <div class="answer-badge">ベストアンサー</div>
+                    <div class="answer-avatar">👨‍🏫</div>
+                    <div class="answer-content">
+                        <span class="answer-author">山田先生（数学講師）</span>
+                        <p>数学は多くの業種で活用されています。例えば、IT・エンジニア職ではプログラミングやアルゴリズム設計、金融業界ではデータ分析やリスク管理、建築・設計では構造計算など...</p>
+                        <button class="view-all-btn">すべての回答を見る</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Card 2 -->
+            <div class="question-card" data-category="career">
+                <div class="question-main">
+                    <div class="question-avatar">👤</div>
+                    <div class="question-content">
+                        <div class="question-meta">
+                            <span class="question-author">佐藤 花子</span>
+                            <span class="question-tag career">キャリア・進路</span>
+                            <span class="question-time">5時間前</span>
+                        </div>
+                        <h3 class="question-title">英語を使う仕事にはどんなものがありますか?</h3>
+                        <p class="question-body">
+                            英語が好きで、将来は英語を活かした仕事に就きたいと考えています。
+                            翻訳や通訳以外にも、英語を使う職業について知りたいです。
+                        </p>
+                        <div class="question-footer">
+                            <button class="action-btn">
+                                <span>👍</span>
+                                <span>23</span>
+                            </button>
+                            <button class="action-btn">
+                                <span>💬</span>
+                                <span>12件の回答</span>
+                            </button>
+                            <button class="action-btn">
+                                <span>🔖</span>
+                                保存
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Card 3 -->
+            <div class="question-card" data-category="study">
+                <div class="question-main">
+                    <div class="question-avatar">👤</div>
+                    <div class="question-content">
+                        <div class="question-meta">
+                            <span class="question-author">鈴木 一郎</span>
+                            <span class="question-tag study">勉強法</span>
+                            <span class="question-time">1日前</span>
+                        </div>
+                        <h3 class="question-title">歴史の勉強は社会に出てどう役立ちますか?</h3>
+                        <p class="question-body">
+                            歴史を勉強する意味がよくわかりません。暗記ばかりで、将来どのように役立つのでしょうか?
+                            実際に社会で働いている方の意見を聞きたいです。
+                        </p>
+                        <div class="question-footer">
+                            <button class="action-btn">
+                                <span>👍</span>
+                                <span>31</span>
+                            </button>
+                            <button class="action-btn">
+                                <span>💬</span>
+                                <span>18件の回答</span>
+                            </button>
+                            <button class="action-btn">
+                                <span>🔖</span>
+                                保存
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Card 4 -->
+            <div class="question-card" data-category="career">
+                <div class="question-main">
+                    <div class="question-avatar">👤</div>
+                    <div class="question-content">
+                        <div class="question-meta">
+                            <span class="question-author">高橋 美咲</span>
+                            <span class="question-tag career">キャリア・進路</span>
+                            <span class="question-time">2日前</span>
+                        </div>
+                        <h3 class="question-title">理科（物理・化学）が活かせる職業を教えてください</h3>
+                        <p class="question-body">
+                            理系科目が得意で、特に物理と化学が好きです。
+                            これらの知識を直接活かせる職業にはどんなものがあるのでしょうか?
+                        </p>
+                        <div class="question-footer">
+                            <button class="action-btn">
+                                <span>👍</span>
+                                <span>19</span>
+                            </button>
+                            <button class="action-btn">
+                                <span>💬</span>
+                                <span>14件の回答</span>
+                            </button>
+                            <button class="action-btn">
+                                <span>🔖</span>
+                                保存
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Card 5 -->
+            <div class="question-card" data-category="motivation">
+                <div class="question-main">
+                    <div class="question-avatar">👤</div>
+                    <div class="question-content">
+                        <div class="question-meta">
+                            <span class="question-author">伊藤 健太</span>
+                            <span class="question-tag motivation">モチベーション</span>
+                            <span class="question-time">3日前</span>
+                        </div>
+                        <h3 class="question-title">勉強のモチベーションを保つコツは?</h3>
+                        <p class="question-body">
+                            受験勉強をしていますが、なかなかモチベーションが続きません。
+                            皆さんはどのようにして勉強のやる気を維持していますか?
+                        </p>
+                        <div class="question-footer">
+                            <button class="action-btn">
+                                <span>👍</span>
+                                <span>42</span>
+                            </button>
+                            <button class="action-btn">
+                                <span>💬</span>
+                                <span>25件の回答</span>
+                            </button>
+                            <button class="action-btn">
+                                <span>🔖</span>
+                                保存
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Card 6 -->
+            <div class="question-card" data-category="subject">
+                <div class="question-main">
+                    <div class="question-avatar">👤</div>
+                    <div class="question-content">
+                        <div class="question-meta">
+                            <span class="question-author">渡辺 さくら</span>
+                            <span class="question-tag subject">科目別</span>
+                            <span class="question-time">4日前</span>
+                        </div>
+                        <h3 class="question-title">国語力を高めるとどんなメリットがありますか?</h3>
+                        <p class="question-body">
+                            国語の勉強の重要性がいまいちピンときません。
+                            読解力や表現力を鍛えることで、将来どのような場面で役立つのでしょうか?
+                        </p>
+                        <div class="question-footer">
+                            <button class="action-btn">
+                                <span>👍</span>
+                                <span>28</span>
+                            </button>
+                            <button class="action-btn">
+                                <span>💬</span>
+                                <span>16件の回答</span>
+                            </button>
+                            <button class="action-btn">
+                                <span>🔖</span>
+                                保存
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Question Modal -->
+    <div class="modal hidden" id="new-question-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>新しい質問を投稿</h2>
+                <button class="modal-close">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="question-category">カテゴリー</label>
+                    <select id="question-category" class="form-select">
+                        <option value="career">キャリア・進路</option>
+                        <option value="study">勉強法</option>
+                        <option value="motivation">モチベーション</option>
+                        <option value="subject">科目別</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="question-title">質問タイトル</label>
+                    <input type="text" id="question-title" class="form-input" placeholder="例: 数学は将来どの業種に役に立ちますか?">
+                </div>
+                <div class="form-group">
+                    <label for="question-body">質問内容</label>
+                    <textarea id="question-body" class="form-textarea" rows="6"
+                        placeholder="詳しく質問内容を記入してください..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline modal-close-btn">キャンセル</button>
+                <button class="btn btn-primary" id="submit-question-btn">投稿する</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tanet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="forum.js"></script>
+</body>
+
+</html>

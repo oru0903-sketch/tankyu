@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="双方向でインタラクティブなライブ授業。チャット、質問キュー、クイズで楽しく学ぼう。">
+    <title>ライブ授業 | Tanet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="live.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Tanet</span>
+            </a>
+            <div class="nav-links">
+                <a href="live.html" class="nav-link active">ライブ授業</a>
+                <a href="video.html" class="nav-link">動画授業</a>
+                <a href="forum.html" class="nav-link">フォーラム</a>
+                <a href="dashboard.html" class="nav-link">マイページ</a>
+            </div>
+            <div class="nav-user">
+                <span class="user-avatar">👤</span>
+                <span class="user-name">ゲスト</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Live Classroom Container -->
+    <div class="live-container">
+        <!-- Main Content Area -->
+        <div class="live-main">
+            <!-- Video Player -->
+            <div class="video-wrapper">
+                <div class="video-player">
+                    <div class="video-placeholder">
+                        <div class="video-icon">🎬</div>
+                        <h2>化学実験ラボ：色の変化を観察しよう</h2>
+                        <p>山田先生 • ライブ配信中</p>
+                        <div class="live-badge">
+                            <span class="live-dot"></span>
+                            <span>LIVE</span>
+                        </div>
+                    </div>
+                    <!-- Quiz Overlay (Hidden by default) -->
+                    <div id="quiz-overlay" class="quiz-overlay hidden">
+                        <div class="quiz-card">
+                            <div class="quiz-header">
+                                <span class="quiz-badge">🧪 クイズタイム！</span>
+                                <span class="quiz-timer">残り 15秒</span>
+                            </div>
+                            <h3 class="quiz-question">光の三原色は何ですか？</h3>
+                            <div class="quiz-options">
+                                <button class="quiz-option">赤・黄・青</button>
+                                <button class="quiz-option">赤・緑・青</button>
+                                <button class="quiz-option">赤・緑・黄</button>
+                                <button class="quiz-option">青・緑・黄</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Video Controls -->
+                <div class="video-controls">
+                    <div class="controls-left">
+                        <button class="control-btn" title="再生/一時停止">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M8 5v14l11-7z" />
+                            </svg>
+                        </button>
+                        <button class="control-btn" title="音釁E>
+                            <svg viewBox=" 0 0 24 24" fill="currentColor" width="24" height="24">
+                            <path
+                                d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+                            </svg>
+                        </button>
+                        <span class="video-time">23:45 / ライチE/span>
+                    </div>
+                    <div class="controls-right">
+                        <button class="control-btn" title="画質">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path
+                                    d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 12H9.5v-2h-2v2H6V9h1.5v2.5h2V9H11v6zm7-1c0 .55-.45 1-1 1h-1v1h-1.5v-1H13v-1.5h1.5v-2.5h-1.5V9h2.5c.55 0 1 .45 1 1v1.5c0 .55-.45 1-1 1h-.5v1H17c.55 0 1-.45 1-1v-2.5c0-.55-.45-1-1-1h-2v-1h1.5c.55 0 1 .45 1 1v.5z" />
+                            </svg>
+                        </button>
+                        <button class="control-btn" title="フルスクリーン">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path
+                                    d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Status Bar -->
+            <div class="user-status-bar">
+                <div class="status-item">
+                    <span class="status-icon">🏆</span>
+                    <span class="status-label">ポイント</span>
+                    <span class="status-value">1,250</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-icon">🎖️</span>
+                    <span class="status-label">ランク</span>
+                    <span class="status-value rank-badge">シルバー</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-icon">📈</span>
+                    <span class="status-label">本日獲得</span>
+                    <span class="status-value highlight">+85pt</span>
+                </div>
+                <div class="focus-mode-toggle">
+                    <label class="toggle-label">
+                        <input type="checkbox" id="focus-mode">
+                        <span class="toggle-slider"></span>
+                        <span class="toggle-text">集中モード</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar (Chat & Questions) -->
+        <aside class="live-sidebar">
+            <!-- Tab Navigation -->
+            <div class="sidebar-tabs">
+                <button class="tab-btn active" data-tab="chat">
+                    <span>💬</span> チャット
+                </button>
+                <button class="tab-btn" data-tab="questions">
+                    <span>❁E/span> 質問キュー
+                </button>
+            </div>
+
+            <!-- Chat Tab -->
+            <div id="chat-panel" class="tab-panel active">
+                <div class="chat-messages" id="chat-messages">
+                    <div class="chat-message">
+                        <span class="chat-avatar">👤</span>
+                        <div class="chat-content">
+                            <span class="chat-name">田中さん</span>
+                            <p>光の三原色、初めて知りました！</p>
+                        </div>
+                        <span class="chat-time">23:32</span>
+                    </div>
+                    <div class="chat-message">
+                        <span class="chat-avatar">👤</span>
+                        <div class="chat-content">
+                            <span class="chat-name">鈴木さん</span>
+                            <p>次の実験楽しみでぁE🔬</p>
+                        </div>
+                        <span class="chat-time">23:33</span>
+                    </div>
+                    <div class="chat-message mentor">
+                        <span class="chat-avatar">🎓</span>
+                        <div class="chat-content">
+                            <span class="chat-name">メンター佐藤</span>
+                            <p>みなさん盛り上がってますね！質問があれば質問キューに投稿してください。</p>
+                        </div>
+                        <span class="chat-time">23:35</span>
+                    </div>
+                    <div class="chat-message">
+                        <span class="chat-avatar">👤</span>
+                        <div class="chat-content">
+                            <span class="chat-name">山本さん</span>
+                            <p>琁E���E実験�E学校では少なぁE��ら貴重！E/p>
+                        </div>
+                        <span class="chat-time">23:38</span>
+                    </div>
+                    <div class="chat-message">
+                        <span class="chat-avatar">👤</span>
+                        <div class="chat-content">
+                            <span class="chat-name">伊藤さん</span>
+                            <p>家でもできる実験を知りたいです！</p>
+                        </div>
+                        <span class="chat-time">23:40</span>
+                    </div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" class="chat-input" placeholder="メッセージを入力..." id="chat-input">
+                    <button class="chat-send-btn" id="chat-send">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Questions Tab -->
+            <div id="questions-panel" class="tab-panel">
+                <div class="questions-list">
+                    <div class="question-item unresolved">
+                        <div class="question-header">
+                            <span class="question-user">高橋さん</span>
+                            <span class="question-status pending">未解決</span>
+                        </div>
+                        <p class="question-text">光の屈折はなぜ起こるんですか？</p>
+                        <div class="question-actions">
+                            <button class="action-btn upvote">
+                                <span>👍</span> 3
+                            </button>
+                            <button class="action-btn answer">回答する</button>
+                        </div>
+                    </div>
+                    <div class="question-item unresolved">
+                        <div class="question-header">
+                            <span class="question-user">中村さん</span>
+                            <span class="question-status pending">未解決</span>
+                        </div>
+                        <p class="question-text">プリズムはどこで買えますか？</p>
+                        <div class="question-actions">
+                            <button class="action-btn upvote">
+                                <span>👍</span> 1
+                            </button>
+                            <button class="action-btn answer">回答する</button>
+                        </div>
+                    </div>
+                    <div class="question-item resolved">
+                        <div class="question-header">
+                            <span class="question-user">小林さん</span>
+                            <span class="question-status solved">解決済み</span>
+                        </div>
+                        <p class="question-text">光の速さはどのくらいですか？</p>
+                        <div class="question-answer">
+                            <span class="answer-by">🎓 メンター佐藤が回答</span>
+                            <p>約30万km/秒です。秒で地球を7周半できる速さですよ！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="question-input-area">
+                    <textarea class="question-input" placeholder="質問を入劁E.." id="question-input"></textarea>
+                    <button class="question-submit-btn" id="question-submit">
+                        質問を投稿
+                    </button>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="live.js"></script>
+</body>
+
+</html>

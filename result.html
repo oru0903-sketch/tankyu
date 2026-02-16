@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="あなたの学習スタイル診断結果。12タイプの中からあなたに最適な学び方を発見しました。">
+    <title>診断結果 | Tanet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="diagnosis.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Tanet</span>
+            </a>
+            <div class="nav-links">
+                <a href="live-select.html" class="nav-link">ライブ授業</a>
+                <a href="video.html" class="nav-link">動画授業</a>
+                <a href="contest.html" class="nav-link">コンテスト</a>
+                <a href="forum.html" class="nav-link">フォーラム</a>
+                <a href="dashboard.html" class="nav-link">マイページ</a>
+            </div>
+            <div class="nav-user">
+                <span class="user-avatar">👤</span>
+                <span class="user-name">ゲスト</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Result Container -->
+    <div class="result-container container">
+        <!-- Result Hero -->
+        <div class="result-hero">
+            <div class="result-badge">
+                <span>✨</span>
+                <span>診断完了</span>
+            </div>
+            <span id="result-icon" class="result-type-icon">🧪</span>
+            <h1 id="result-name" class="result-type-name">【実験・体感型】クリエイター</h1>
+            <p id="result-subtitle" class="result-type-subtitle">あなたの学習スタイルが判明しました</p>
+        </div>
+
+        <!-- Result Content -->
+        <div class="result-content">
+            <!-- Description Section -->
+            <div class="result-section">
+                <h3><span>📝</span> あなたの学習タイプ</h3>
+                <p id="result-description" class="result-description">
+                    実際に手を動かして試すことで理解が深まるタイプ...
+                </p>
+            </div>
+
+            <!-- Traits Section -->
+            <div class="result-section">
+                <h3><span>✨</span> あなたの特徴</h3>
+                <div id="traits-list" class="traits-list">
+                    <!-- Traits will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Strategies Section -->
+            <div class="result-section">
+                <h3><span>📚</span> 学習戦略のヒント</h3>
+                <ul id="strategies-list" class="strategies-list">
+                    <!-- Strategies will be inserted here -->
+                </ul>
+            </div>
+
+            <!-- Hashtags Section -->
+            <div class="result-section">
+                <h3><span>🏷️</span> あなたのハッシュタグ</h3>
+                <div id="hashtags" class="hashtags">
+                    <!-- Hashtags will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Recommended Lessons Section -->
+            <div class="result-section">
+                <h3><span>🎬</span> おすすめ授業</h3>
+                <div id="recommended-lessons" class="recommended-lessons">
+                    <!-- Lessons will be inserted here -->
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="result-cta">
+                <p>結果を保存してもっと多くの授業にアクセスしよう</p>
+                <button class="btn btn-large btn-glow">
+                    <span>無料でアカウント作る</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </button>
+                <div style="margin-top: var(--spacing-md);">
+                    <a href="diagnosis.html" class="btn btn-outline"
+                        onclick="sessionStorage.removeItem('learning_style_diagnosis'); sessionStorage.removeItem('learning_style_result');">もう一度診断する</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tanet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="diagnosis-data.js"></script>
+    <script src="result.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="録画済みの動画授業を好きな時間に視聴。いつでもどこでも学習できます。">
+    <title>動画授業 | Tanet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="video.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Tanet</span>
+            </a>
+            <div class="nav-links">
+                <a href="live-select.html" class="nav-link">ライブ授業</a>
+                <a href="video.html" class="nav-link active">動画授業</a>
+                <a href="contest.html" class="nav-link">コンテスト</a>
+                <a href="forum.html" class="nav-link">フォーラム</a>
+                <a href="dashboard.html" class="nav-link">マイページ</a>
+            </div>
+            <div class="nav-user">
+                <span class="user-avatar">👤</span>
+                <span class="user-name">ゲスト</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Video Page Container -->
+    <div class="video-container container">
+        <!-- Page Header -->
+        <div class="video-header">
+            <div class="video-title">
+                <h1>🎬 動画授業</h1>
+                <p>録画済みの授業をいつでも視聴できます</p>
+            </div>
+        </div>
+
+        <!-- Filter & Search -->
+        <div class="video-controls">
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">すべて</button>
+                <button class="filter-tab" data-filter="science">🧪 理科</button>
+                <button class="filter-tab" data-filter="math">📊 数学</button>
+                <button class="filter-tab" data-filter="english">🌍 英語</button>
+                <button class="filter-tab" data-filter="social">📚 社会</button>
+            </div>
+            <div class="search-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="M21 21l-4.35-4.35" />
+                </svg>
+                <input type="text" placeholder="動画を検索..." class="search-input">
+            </div>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="video-grid">
+            <!-- Video Card 1 -->
+            <article class="video-card" data-category="science">
+                <div class="video-thumbnail thumb-science">
+                    <span class="thumbnail-icon">🔬</span>
+                    <span class="video-duration">45:30</span>
+                    <div class="play-overlay">
+                        <span class="play-btn">▶</span>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <span class="video-category">🧪 理科・実験</span>
+                    <h3 class="video-title-card">化学反応の基礎：酸とアルカリ</h3>
+                    <p class="video-description">身近な物質を使った酸とアルカリの実験を通じて、化学反応の基礎を学びます。</p>
+                    <div class="video-meta">
+                        <span class="video-teacher">👨‍🏫 山田先生</span>
+                        <span class="video-views">👁️ 1,234回視聴</span>
+                    </div>
+                    <div class="video-tags">
+                        <span class="tag">化学</span>
+                        <span class="tag">実験</span>
+                        <span class="tag">初級</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Video Card 2 -->
+            <article class="video-card" data-category="math">
+                <div class="video-thumbnail thumb-math">
+                    <span class="thumbnail-icon">📐</span>
+                    <span class="video-duration">38:15</span>
+                    <div class="play-overlay">
+                        <span class="play-btn">▶</span>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <span class="video-category">📊 数学</span>
+                    <h3 class="video-title-card">二次関数のグラフを完全マスター</h3>
+                    <p class="video-description">頂点の求め方から平行移動まで、二次関数のグラフを徹底解説します。</p>
+                    <div class="video-meta">
+                        <span class="video-teacher">👨‍🏫 佐藤先生</span>
+                        <span class="video-views">👁️ 2,456回視聴</span>
+                    </div>
+                    <div class="video-tags">
+                        <span class="tag">二次関数</span>
+                        <span class="tag">グラフ</span>
+                        <span class="tag">中級</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Video Card 3 -->
+            <article class="video-card" data-category="english">
+                <div class="video-thumbnail thumb-english">
+                    <span class="thumbnail-icon">🎧</span>
+                    <span class="video-duration">52:00</span>
+                    <div class="play-overlay">
+                        <span class="play-btn">▶</span>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <span class="video-category">🌍 英語</span>
+                    <h3 class="video-title-card">英語リスニング特訓：日常会話編</h3>
+                    <p class="video-description">ネイティブの速さに慣れる！日常会話でよく使われるフレーズを聞き取ろう。</p>
+                    <div class="video-meta">
+                        <span class="video-teacher">👨‍🏫 田中先生</span>
+                        <span class="video-views">👁️ 1,892回視聴</span>
+                    </div>
+                    <div class="video-tags">
+                        <span class="tag">リスニング</span>
+                        <span class="tag">会話</span>
+                        <span class="tag">中級</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Video Card 4 -->
+            <article class="video-card" data-category="science">
+                <div class="video-thumbnail thumb-social">
+                    <span class="thumbnail-icon">⚡</span>
+                    <span class="video-duration">41:20</span>
+                    <div class="play-overlay">
+                        <span class="play-btn">▶</span>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <span class="video-category">🧪 理科・実験</span>
+                    <h3 class="video-title-card">電気回路入門：LEDを光らせよう</h3>
+                    <p class="video-description">電気回路の基本を学びながら、実際にLEDを光らせる実験を行います。</p>
+                    <div class="video-meta">
+                        <span class="video-teacher">👨‍🏫 鈴木先生</span>
+                        <span class="video-views">👁️ 987回視聴</span>
+                    </div>
+                    <div class="video-tags">
+                        <span class="tag">電気</span>
+                        <span class="tag">工作</span>
+                        <span class="tag">初級</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Video Card 5 -->
+            <article class="video-card" data-category="social">
+                <div class="video-thumbnail thumb-science">
+                    <span class="thumbnail-icon">🏛️</span>
+                    <span class="video-duration">35:45</span>
+                    <div class="play-overlay">
+                        <span class="play-btn">▶</span>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <span class="video-category">📚 社会</span>
+                    <h3 class="video-title-card">日本の歴史：戦国時代の武将たち</h3>
+                    <p class="video-description">織田信長、豊臣秀吉、徳川家康。三英傑の活躍を分かりやすく解説。</p>
+                    <div class="video-meta">
+                        <span class="video-teacher">👨‍🏫 高橋先生</span>
+                        <span class="video-views">👁️ 1,567回視聴</span>
+                    </div>
+                    <div class="video-tags">
+                        <span class="tag">歴史</span>
+                        <span class="tag">戦国時代</span>
+                        <span class="tag">初級</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Video Card 6 -->
+            <article class="video-card" data-category="math">
+                <div class="video-thumbnail thumb-math">
+                    <span class="thumbnail-icon">📊</span>
+                    <span class="video-duration">48:30</span>
+                    <div class="play-overlay">
+                        <span class="play-btn">▶</span>
+                    </div>
+                </div>
+                <div class="video-info">
+                    <span class="video-category">📊 数学</span>
+                    <h3 class="video-title-card">図形問題の解き方：合同と相似</h3>
+                    <p class="video-description">証明問題の解き方のコツを伝授。合同条件と相似条件を完璧にマスター。</p>
+                    <div class="video-meta">
+                        <span class="video-teacher">👨‍🏫 佐藤先生</span>
+                        <span class="video-views">👁️ 2,123回視聴</span>
+                    </div>
+                    <div class="video-tags">
+                        <span class="tag">図形</span>
+                        <span class="tag">証明</span>
+                        <span class="tag">中級</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+
+        <!-- Load More -->
+        <div class="load-more">
+            <button class="btn btn-outline">もっと見る</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tanet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="video.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ライブ授業視聴ページ。クイズに参加して、先生に質問しよう！">
+    <title>ライブ授業 | Tanet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="live-class.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Tanet</span>
+            </a>
+            <div class="nav-links">
+                <a href="live-select.html" class="nav-link active">ライブ授業</a>
+                <a href="video.html" class="nav-link">動画授業</a>
+                <a href="contest.html" class="nav-link">コンテスト</a>
+                <a href="forum.html" class="nav-link">フォーラム</a>
+                <a href="dashboard.html" class="nav-link">マイページ</a>
+            </div>
+            <div class="nav-user">
+                <span class="user-avatar">👤</span>
+                <span class="user-name">ゲスト</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Live Class Container -->
+    <div class="live-class-container">
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Video Player -->
+            <div class="video-section">
+                <div class="video-player">
+                    <div class="video-placeholder">
+                        <div class="video-icon-large">🚗💥</div>
+                        <div class="live-badge-video">
+                            <span class="live-dot"></span>
+                            LIVE
+                        </div>
+                    </div>
+                    <!-- Video Controls -->
+                    <div class="video-controls">
+                        <div class="controls-left">
+                            <button class="control-btn" title="再生/一時停止">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </button>
+                            <button class="control-btn" title="音量">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path
+                                        d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" />
+                                </svg>
+                            </button>
+                            <span class="video-time">23:45 / ライブ配信中</span>
+                        </div>
+                        <div class="controls-right">
+                            <button class="control-btn" title="画質">HD</button>
+                            <button class="control-btn" title="フルスクリーン">
+                                <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                    <path
+                                        d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Info -->
+                <div class="video-info">
+                    <h1 class="video-title">衝突エネルギーを逃がせ！命を守る『つぶれ方』の設計</h1>
+                    <div class="video-meta">
+                        <div class="teacher-info">
+                            <span class="teacher-avatar">👨‍🔬</span>
+                            <div class="teacher-details">
+                                <span class="teacher-name">木村 先生</span>
+                                <span class="teacher-subject">物理・工学</span>
+                            </div>
+                        </div>
+                        <div class="viewer-info">
+                            <span class="viewer-count">👥 234人が視聴中</span>
+                        </div>
+                    </div>
+                    <div class="video-description">
+                        <p>クルマが衝突したとき、なぜ「つぶれる」ことが大切なのでしょうか？
+                            今日は衝突安全ボディ（クラッシャブルゾーン）の秘密を実験で解き明かします！
+                            エネルギー保存の法則から、命を守る設計の工夫まで学びましょう。</p>
+                    </div>
+                </div>
+
+                <!-- Quiz Section -->
+                <div class="quiz-section" id="quiz-section">
+                    <div class="quiz-header-bar">
+                        <span class="quiz-icon">🧠</span>
+                        <span class="quiz-title">クイズタイム！</span>
+                        <span class="quiz-timer" id="quiz-timer">残り 15秒</span>
+                    </div>
+                    <div class="quiz-content">
+                        <h3 class="quiz-question" id="quiz-question">車が衝突したとき、運動エネルギーはどうなる？</h3>
+                        <div class="quiz-options" id="quiz-options">
+                            <button class="quiz-option" data-answer="a">消滅する</button>
+                            <button class="quiz-option" data-answer="b">熱や音、変形のエネルギーに変わる</button>
+                            <button class="quiz-option" data-answer="c">そのまま残る</button>
+                            <button class="quiz-option" data-answer="d">倍になる</button>
+                        </div>
+                    </div>
+                    <div class="quiz-result hidden" id="quiz-result">
+                        <div class="result-icon" id="result-icon">✅</div>
+                        <div class="result-text" id="result-text">正解！+20ポイント獲得！</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Teacher Question Section -->
+            <div class="sidebar-section teacher-question">
+                <div class="section-header">
+                    <span class="section-icon">👨‍🏫</span>
+                    <span class="section-title">先生に質問</span>
+                </div>
+                <div class="question-list" id="teacher-question-list">
+                    <div class="question-item sent">
+                        <div class="question-text">クラッシャブルゾーンはどのくらいの速度まで対応できますか？</div>
+                        <div class="question-status">送信済み</div>
+                    </div>
+                </div>
+                <div class="question-input-area">
+                    <textarea class="question-input" id="teacher-question-input" placeholder="先生への質問を入力..."></textarea>
+                    <button class="send-btn" id="send-teacher-question">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                        </svg>
+                    </button>
+                </div>
+                <p class="section-note">※ 先生が回答を選んで授業内で答えます</p>
+            </div>
+
+            <!-- AI Assistant Section -->
+            <div class="sidebar-section ai-assistant">
+                <div class="section-header">
+                    <span class="section-icon">🤖</span>
+                    <span class="section-title">AIアシスタント</span>
+                    <span class="ai-status online">オンライン</span>
+                </div>
+                <div class="ai-chat-container" id="ai-chat-container">
+                    <div class="ai-message assistant">
+                        <div class="ai-avatar">🤖</div>
+                        <div class="ai-bubble">
+                            こんにちは！授業について分からないことがあれば、いつでも聞いてください。リアルタイムでお答えします！
+                        </div>
+                    </div>
+                </div>
+                <div class="ai-input-area">
+                    <input type="text" class="ai-input" id="ai-input" placeholder="AIに質問する...">
+                    <button class="send-btn" id="send-ai-question">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Points Status removed -->
+        </aside>
+    </div>
+
+    <!-- AI Chat Floating Button (for mobile) -->
+    <button class="ai-fab" id="ai-fab">
+        <span>🤖</span>
+    </button>
+
+    <!-- AI Chat Modal (for mobile) -->
+    <div class="ai-modal hidden" id="ai-modal">
+        <div class="modal-overlay"></div>
+        <div class="ai-modal-content">
+            <div class="ai-modal-header">
+                <span>🤖 AIアシスタント</span>
+                <button class="modal-close" id="close-ai-modal">&times;</button>
+            </div>
+            <div class="ai-modal-chat" id="ai-modal-chat">
+                <div class="ai-message assistant">
+                    <div class="ai-avatar">🤖</div>
+                    <div class="ai-bubble">
+                        こんにちは！授業について分からないことがあれば、いつでも聞いてください！
+                    </div>
+                </div>
+            </div>
+            <div class="ai-modal-input-area">
+                <input type="text" class="ai-modal-input" id="ai-modal-input" placeholder="AIに質問する...">
+                <button class="send-btn" id="send-ai-modal">
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="live-class.js"></script>
+</body>
+
+</html>

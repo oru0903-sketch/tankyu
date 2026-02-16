@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ライブ授業の一覧。現在配信中の授業に参加しよう！">
+    <title>ライブ授業を選ぶ | Tanet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="live-select.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Tanet</span>
+            </a>
+            <div class="nav-links">
+                <a href="live-select.html" class="nav-link active">ライブ授業</a>
+                <a href="video.html" class="nav-link">動画授業</a>
+                <a href="contest.html" class="nav-link">コンテスト</a>
+                <a href="forum.html" class="nav-link">フォーラム</a>
+                <a href="dashboard.html" class="nav-link">マイページ</a>
+            </div>
+            <div class="nav-user">
+                <span class="user-avatar">👤</span>
+                <span class="user-name">ゲスト</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Live Select Container -->
+    <div class="live-select-container container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>🎬 ライブ授業</h1>
+            <p>リアルタイムで先生と一緒に学ぼう！</p>
+        </div>
+
+        <!-- Currently Live Section -->
+        <section class="live-now-section">
+            <div class="section-label">
+                <span class="live-indicator"></span>
+                <span>現在配信中</span>
+            </div>
+            <div class="featured-live" onclick="location.href='live-class.html'">
+                <div class="featured-thumbnail">
+                    <div class="thumbnail-placeholder">
+                        <span class="thumbnail-icon">🚗💥</span>
+                    </div>
+                    <div class="live-badge-large">
+                        <span class="live-dot"></span>
+                        LIVE
+                    </div>
+                    <div class="viewer-count">
+                        <span>👥</span> 234人が視聴中
+                    </div>
+                </div>
+                <div class="featured-info">
+                    <h2>衝突エネルギーを逃がせ！命を守る『つぶれ方』の設計</h2>
+                    <p class="featured-description">
+                        クルマが衝突したとき、なぜ「つぶれる」ことが大切なの？
+                        衝突安全ボディの秘密を実験で解き明かします！
+                    </p>
+                    <div class="featured-meta">
+                        <div class="teacher-info">
+                            <span class="teacher-avatar">👨‍🔬</span>
+                            <span class="teacher-name">木村 先生</span>
+                            <span class="teacher-subject">物理・工学</span>
+                        </div>
+                        <div class="meta-tags">
+                            <span class="tag">物理</span>
+                            <span class="tag">工学</span>
+                            <span class="tag">安全設計</span>
+                        </div>
+                    </div>
+                    <a href="live-class.html" class="btn btn-primary btn-large btn-glow">
+                        🎬 今すぐ参加する
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Classes Section -->
+        <section class="classes-section">
+            <div class="section-header-row">
+                <h3>📅 今後のライブ授業</h3>
+                <a href="#" class="see-all-link">すべて見る →</a>
+            </div>
+            <div class="classes-grid">
+                <div class="class-card upcoming">
+                    <div class="card-thumbnail">
+                        <div class="thumbnail-placeholder blue">
+                            <span>🧬</span>
+                        </div>
+                        <div class="upcoming-badge">1/30 16:00〜</div>
+                    </div>
+                    <div class="card-info">
+                        <h4>DNAを取り出そう！キッチン実験</h4>
+                        <div class="card-meta">
+                            <span class="teacher">佐藤 先生</span>
+                            <span class="dot">•</span>
+                            <span class="subject">生物</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-card upcoming">
+                    <div class="card-thumbnail">
+                        <div class="thumbnail-placeholder purple">
+                            <span>🌌</span>
+                        </div>
+                        <div class="upcoming-badge">2/1 15:00〜</div>
+                    </div>
+                    <div class="card-info">
+                        <h4>宇宙の果てはどうなってる？</h4>
+                        <div class="card-meta">
+                            <span class="teacher">山田 先生</span>
+                            <span class="dot">•</span>
+                            <span class="subject">天文学</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-card upcoming">
+                    <div class="card-thumbnail">
+                        <div class="thumbnail-placeholder green">
+                            <span>🔢</span>
+                        </div>
+                        <div class="upcoming-badge">2/3 17:00〜</div>
+                    </div>
+                    <div class="card-info">
+                        <h4>暗号を解け！数学ミステリー</h4>
+                        <div class="card-meta">
+                            <span class="teacher">田中 先生</span>
+                            <span class="dot">•</span>
+                            <span class="subject">数学</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-card upcoming">
+                    <div class="card-thumbnail">
+                        <div class="thumbnail-placeholder orange">
+                            <span>🌋</span>
+                        </div>
+                        <div class="upcoming-badge">2/5 16:00〜</div>
+                    </div>
+                    <div class="card-info">
+                        <h4>火山はなぜ噴火する？</h4>
+                        <div class="card-meta">
+                            <span class="teacher">高橋 先生</span>
+                            <span class="dot">•</span>
+                            <span class="subject">地学</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Past Classes Section -->
+        <section class="classes-section">
+            <div class="section-header-row">
+                <h3>📼 過去のライブ授業（アーカイブ）</h3>
+                <a href="#" class="see-all-link">すべて見る →</a>
+            </div>
+            <div class="classes-grid">
+                <div class="class-card archive">
+                    <div class="card-thumbnail">
+                        <div class="thumbnail-placeholder teal">
+                            <span>🔬</span>
+                        </div>
+                        <div class="archive-badge">アーカイブ</div>
+                        <div class="duration">45:32</div>
+                    </div>
+                    <div class="card-info">
+                        <h4>光の三原色で遊ぼう！</h4>
+                        <div class="card-meta">
+                            <span class="teacher">山田 先生</span>
+                            <span class="dot">•</span>
+                            <span class="views">1,234回視聴</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-card archive">
+                    <div class="card-thumbnail">
+                        <div class="thumbnail-placeholder pink">
+                            <span>🧪</span>
+                        </div>
+                        <div class="archive-badge">アーカイブ</div>
+                        <div class="duration">52:15</div>
+                    </div>
+                    <div class="card-info">
+                        <h4>シャボン玉の科学</h4>
+                        <div class="card-meta">
+                            <span class="teacher">伊藤 先生</span>
+                            <span class="dot">•</span>
+                            <span class="views">987回視聴</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-card archive">
+                    <div class="card-thumbnail">
+                        <div class="thumbnail-placeholder indigo">
+                            <span>⚡</span>
+                        </div>
+                        <div class="archive-badge">アーカイブ</div>
+                        <div class="duration">38:47</div>
+                    </div>
+                    <div class="card-info">
+                        <h4>静電気のふしぎ</h4>
+                        <div class="card-meta">
+                            <span class="teacher">鈴木 先生</span>
+                            <span class="dot">•</span>
+                            <span class="views">2,156回視聴</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-card archive">
+                    <div class="card-thumbnail">
+                        <div class="thumbnail-placeholder amber">
+                            <span>🌈</span>
+                        </div>
+                        <div class="archive-badge">アーカイブ</div>
+                        <div class="duration">41:23</div>
+                    </div>
+                    <div class="card-info">
+                        <h4>虹はどうやってできる？</h4>
+                        <div class="card-meta">
+                            <span class="teacher">中村 先生</span>
+                            <span class="dot">•</span>
+                            <span class="views">1,567回視聴</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-card archive">
+                    <div class="card-thumbnail">
+                        <div class="thumbnail-placeholder cyan">
+                            <span>🌊</span>
+                        </div>
+                        <div class="archive-badge">アーカイブ</div>
+                        <div class="duration">47:08</div>
+                    </div>
+                    <div class="card-info">
+                        <h4>波の性質を探る</h4>
+                        <div class="card-meta">
+                            <span class="teacher">木村 先生</span>
+                            <span class="dot">•</span>
+                            <span class="views">892回視聴</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="class-card archive">
+                    <div class="card-thumbnail">
+                        <div class="thumbnail-placeholder rose">
+                            <span>🧲</span>
+                        </div>
+                        <div class="archive-badge">アーカイブ</div>
+                        <div class="duration">44:56</div>
+                    </div>
+                    <div class="card-info">
+                        <h4>磁石の不思議な力</h4>
+                        <div class="card-meta">
+                            <span class="teacher">小林 先生</span>
+                            <span class="dot">•</span>
+                            <span class="views">1,023回視聴</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tanet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="live-select.js"></script>
+</body>
+
+</html>

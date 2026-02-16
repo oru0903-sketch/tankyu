@@ -1,0 +1,324 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ポイント履歴の確認と特典交換">
+    <title>ポイント交換 | Tanet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="points.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Tanet</span>
+            </a>
+            <div class="nav-links">
+                <a href="live-select.html" class="nav-link">ライブ授業</a>
+                <a href="video.html" class="nav-link">動画授業</a>
+                <a href="contest.html" class="nav-link">コンテスト</a>
+                <a href="forum.html" class="nav-link">フォーラム</a>
+                <a href="dashboard.html" class="nav-link active">マイページ</a>
+            </div>
+            <div class="nav-user">
+                <span class="user-avatar">👤</span>
+                <span class="user-name">ゲスト</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Points Page Container -->
+    <div class="points-container container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="dashboard.html">マイページ</a>
+            <span>›</span>
+            <span>ポイント交換</span>
+        </div>
+
+        <!-- Points Overview -->
+        <div class="points-overview">
+            <div class="points-main">
+                <div class="points-icon">🏆</div>
+                <div class="points-info">
+                    <span class="points-label">現在のポイント</span>
+                    <span class="points-value">1,250<span class="points-unit">pt</span></span>
+                </div>
+            </div>
+            <div class="points-rank">
+                <div class="rank-badge-large">🎖️</div>
+                <div class="rank-info">
+                    <span class="rank-label">ランク</span>
+                    <span class="rank-value">シルバー</span>
+                    <div class="rank-progress">
+                        <div class="rank-progress-bar">
+                            <div class="rank-progress-fill" style="width: 62.5%;"></div>
+                        </div>
+                        <span class="rank-progress-text">ゴールドまであと750pt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="points-tabs">
+            <button class="points-tab active" data-tab="history">📊 ポイント履歴</button>
+            <button class="points-tab" data-tab="exchange">🎁 特典交換</button>
+        </div>
+
+        <!-- History Tab -->
+        <div id="history-panel" class="tab-panel active">
+            <div class="history-filters">
+                <select class="history-filter-select">
+                    <option value="all">すべて</option>
+                    <option value="earned">獲得のみ</option>
+                    <option value="used">使用のみ</option>
+                </select>
+            </div>
+            <div class="history-list">
+                <div class="history-item">
+                    <div class="history-icon positive">+</div>
+                    <div class="history-content">
+                        <span class="history-action">ライブ授業参加</span>
+                        <span class="history-meta">化学実験ラボ • 今日 14:00</span>
+                    </div>
+                    <span class="history-points positive">+50pt</span>
+                </div>
+                <div class="history-item">
+                    <div class="history-icon positive">+</div>
+                    <div class="history-content">
+                        <span class="history-action">クイズ正解</span>
+                        <span class="history-meta">化学実験ラボ • 今日 14:23</span>
+                    </div>
+                    <span class="history-points positive">+20pt</span>
+                </div>
+                <div class="history-item">
+                    <div class="history-icon positive">+</div>
+                    <div class="history-content">
+                        <span class="history-action">フォーラム回答</span>
+                        <span class="history-meta">化学の質問 • 昨日</span>
+                    </div>
+                    <span class="history-points positive">+10pt</span>
+                </div>
+                <div class="history-item">
+                    <div class="history-icon negative">-</div>
+                    <div class="history-content">
+                        <span class="history-action">特典交換</span>
+                        <span class="history-meta">オリジナルステッカー • 1/15</span>
+                    </div>
+                    <span class="history-points negative">-200pt</span>
+                </div>
+                <div class="history-item">
+                    <div class="history-icon positive">+</div>
+                    <div class="history-content">
+                        <span class="history-action">ライブ授業参加</span>
+                        <span class="history-meta">数学パズル • 1/14</span>
+                    </div>
+                    <span class="history-points positive">+50pt</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Exchange Tab -->
+        <div id="exchange-panel" class="tab-panel">
+            <div class="exchange-categories">
+                <button class="exchange-category active" data-category="all">すべて</button>
+                <button class="exchange-category" data-category="goods">グッズ</button>
+                <button class="exchange-category" data-category="lesson">授業関連</button>
+                <button class="exchange-category" data-category="digital">デジタル</button>
+            </div>
+            <div class="exchange-grid">
+                <div class="exchange-card" data-category="goods">
+                    <div class="exchange-image">🎨</div>
+                    <div class="exchange-info">
+                        <h4>オリジナルステッカー</h4>
+                        <p>Tanetオリジナルデザイン</p>
+                        <div class="exchange-footer">
+                            <span class="exchange-price">200pt</span>
+                            <button class="btn btn-primary btn-sm" data-item="オリジナルステッカー" data-price="200">交換する</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="exchange-card" data-category="goods">
+                    <div class="exchange-image">📓</div>
+                    <div class="exchange-info">
+                        <h4>学習ノート</h4>
+                        <p>A5サイズ・オリジナルデザイン</p>
+                        <div class="exchange-footer">
+                            <span class="exchange-price">500pt</span>
+                            <button class="btn btn-primary btn-sm" data-item="学習ノート" data-price="500">交換する</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="exchange-card" data-category="digital">
+                    <div class="exchange-image">🖼️</div>
+                    <div class="exchange-info">
+                        <h4>プロフィールフレーム</h4>
+                        <p>限定デザインのフレーム</p>
+                        <div class="exchange-footer">
+                            <span class="exchange-price">150pt</span>
+                            <button class="btn btn-primary btn-sm" data-item="プロフィールフレーム" data-price="150">交換する</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="exchange-card" data-category="lesson">
+                    <div class="exchange-image">👨‍🏫</div>
+                    <div class="exchange-info">
+                        <h4>個別相談チケット</h4>
+                        <p>先生と1対1で質問できる</p>
+                        <div class="exchange-footer">
+                            <span class="exchange-price">800pt</span>
+                            <button class="btn btn-primary btn-sm" data-item="個別相談チケット" data-price="800">交換する</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 新規追加アイテム -->
+                <div class="exchange-card featured" data-category="lesson">
+                    <div class="exchange-badge-new">NEW</div>
+                    <div class="exchange-image">🎫</div>
+                    <div class="exchange-info">
+                        <h4>授業優先チケット</h4>
+                        <p>人気ライブ授業の優先参加権</p>
+                        <div class="exchange-footer">
+                            <span class="exchange-price">300pt</span>
+                            <button class="btn btn-primary btn-sm" data-item="授業優先チケット" data-price="300">交換する</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="exchange-card featured" data-category="lesson">
+                    <div class="exchange-badge-new">NEW</div>
+                    <div class="exchange-image">🏭</div>
+                    <div class="exchange-info">
+                        <h4>見学会参加チケット（抽選）</h4>
+                        <p>科学館・工場見学会への抽選参加権</p>
+                        <div class="exchange-footer">
+                            <span class="exchange-price">200pt</span>
+                            <button class="btn btn-primary btn-sm" data-item="見学会参加チケット" data-price="200"
+                                data-lottery="true">申し込む</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="exchange-card featured" data-category="goods">
+                    <div class="exchange-badge-new">NEW</div>
+                    <div class="exchange-image">🔬</div>
+                    <div class="exchange-info">
+                        <h4>実験キット</h4>
+                        <p>自宅でできる本格実験キット（3種類から選択）</p>
+                        <div class="exchange-footer">
+                            <span class="exchange-price">500pt</span>
+                            <button class="btn btn-primary btn-sm" id="experiment-kit-btn" data-item="実験キット"
+                                data-price="500">選んで交換</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exchange Confirmation Modal -->
+    <div id="exchange-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>交換確認</h2>
+                <button class="modal-close" id="close-exchange-modal">&times;</button>
+            </div>
+            <div class="exchange-confirm-content">
+                <p>以下の特典と交換しますか？</p>
+                <div class="exchange-confirm-item">
+                    <span id="exchange-item-name">-</span>
+                    <span id="exchange-item-price" class="exchange-confirm-price">-</span>
+                </div>
+                <div class="exchange-confirm-balance">
+                    <span>交換後の残高:</span>
+                    <span id="exchange-remaining">-</span>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-outline" id="cancel-exchange">キャンセル</button>
+                <button class="btn btn-primary" id="confirm-exchange">交換する</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experiment Kit Selection Modal -->
+    <div id="kit-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2>🔬 実験キットを選択</h2>
+                <button class="modal-close" id="close-kit-modal">&times;</button>
+            </div>
+            <div class="kit-selection-content">
+                <p class="kit-instruction">以下の3種類から1つ選んでください（500pt）</p>
+                <div class="kit-options">
+                    <div class="kit-option" data-kit="crystal">
+                        <div class="kit-icon">💎</div>
+                        <div class="kit-info">
+                            <h4>結晶成長ラボ</h4>
+                            <p class="kit-subtitle">「クリスタル・タワー作成キット」</p>
+                            <p class="kit-desc">美しい結晶を育てて、結晶化の科学を学ぼう！タワー型の結晶が約1週間で完成します。</p>
+                        </div>
+                        <div class="kit-check">✓</div>
+                    </div>
+                    <div class="kit-option" data-kit="solar">
+                        <div class="kit-icon">☀️</div>
+                        <div class="kit-info">
+                            <h4>太陽光で作る！</h4>
+                            <p class="kit-subtitle">「ソーラー・クッキング・パラボラ」</p>
+                            <p class="kit-desc">放物面鏡の原理で太陽の熱を集め、実際に調理ができるソーラークッカーを組み立てます。</p>
+                        </div>
+                        <div class="kit-check">✓</div>
+                    </div>
+                    <div class="kit-option" data-kit="saltcar">
+                        <div class="kit-icon">🚗</div>
+                        <div class="kit-info">
+                            <h4>自動走行！</h4>
+                            <p class="kit-subtitle">「塩水パワー・バギー」</p>
+                            <p class="kit-desc">塩水を燃料にして動くバギーを組み立てよう！電気化学の原理を体験できます。</p>
+                        </div>
+                        <div class="kit-check">✓</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-outline" id="cancel-kit">キャンセル</button>
+                <button class="btn btn-primary" id="confirm-kit" disabled>選択して申し込む</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Complete Modal -->
+    <div id="complete-modal" class="modal hidden">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <div class="complete-content">
+                <div class="complete-icon">🎉</div>
+                <h2>申し込み完了！</h2>
+                <p id="complete-message">申し込みが完了しました。</p>
+                <div class="complete-details" id="complete-details"></div>
+                <button class="btn btn-primary" id="close-complete">閉じる</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tanet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="points.js"></script>
+</body>
+
+</html>

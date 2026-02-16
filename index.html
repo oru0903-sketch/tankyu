@@ -1,0 +1,370 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="あなたの学習スタイルを診断して、最適な授業を提案。体験型オンライン学習サービス「Tanet」">
+    <title>Tanet | あなたに最適な学び方を発見</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Tanet</span>
+            </a>
+            <div class="nav-links">
+                <a href="live-select.html" class="nav-link">ライブ授業</a>
+                <a href="video.html" class="nav-link">動画授業</a>
+                <a href="contest.html" class="nav-link">コンテスト</a>
+                <a href="forum.html" class="nav-link">フォーラム</a>
+                <a href="dashboard.html" class="nav-link">マイページ</a>
+            </div>
+            <div class="nav-user">
+                <span class="user-avatar">👤</span>
+                <span class="user-name">ゲスト</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-icon">👋</span>
+                <span>おかえりなさい、ゲストさん</span>
+            </div>
+            <h1 class="hero-title">
+                今日も<span class="gradient-text">楽しく学ぼう</span>
+            </h1>
+            <p class="hero-description">
+                あなたの学習スタイルに合わせた授業が待っています。<br>
+                今日のライブ授業をチェックして、新しい発見をしましょう。
+            </p>
+            <div class="hero-cta">
+                <a href="live-select.html" class="btn btn-large btn-glow">
+                    <span>今日の授業を見る</span>
+                    <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="dashboard.html" class="btn btn-large btn-outline">
+                    <span>マイページ</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card card-1">
+                <div class="card-icon">🎬</div>
+                <div class="card-label">ライブ授業</div>
+            </div>
+            <div class="floating-card card-2">
+                <div class="card-icon">�</div>
+                <div class="card-label">動画授業</div>
+            </div>
+            <div class="floating-card card-3">
+                <div class="card-icon">�</div>
+                <div class="card-label">コンテスト</div>
+            </div>
+            <div class="floating-card card-4">
+                <div class="card-icon">💬</div>
+                <div class="card-label">フォーラム</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Monthly Calendar Section -->
+    <section class="calendar-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Schedule</span>
+                <h2 class="section-title"><span class="gradient-text">1月</span>の授業カレンダー</h2>
+            </div>
+            <div class="calendar-wrapper">
+                <div class="calendar">
+                    <div class="calendar-header">
+                        <button class="calendar-nav-btn">◀</button>
+                        <span class="calendar-month">2026年1月</span>
+                        <button class="calendar-nav-btn">▶</button>
+                    </div>
+                    <div class="calendar-weekdays">
+                        <span>日</span>
+                        <span>月</span>
+                        <span>火</span>
+                        <span>水</span>
+                        <span>木</span>
+                        <span>金</span>
+                        <span>土</span>
+                    </div>
+                    <div class="calendar-days">
+                        <span class="other-month">28</span>
+                        <span class="other-month">29</span>
+                        <span class="other-month">30</span>
+                        <span class="other-month">31</span>
+                        <span>1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <span>4</span>
+                        <span>5</span>
+                        <span class="has-lesson" data-lessons="2">6</span>
+                        <span>7</span>
+                        <span class="has-lesson" data-lessons="1">8</span>
+                        <span>9</span>
+                        <span class="has-lesson" data-lessons="3">10</span>
+                        <span>11</span>
+                        <span class="has-lesson" data-lessons="2">12</span>
+                        <span class="has-lesson" data-lessons="1">13</span>
+                        <span>14</span>
+                        <span class="has-lesson" data-lessons="2">15</span>
+                        <span>16</span>
+                        <span class="has-lesson" data-lessons="1">17</span>
+                        <span class="today has-lesson" data-lessons="2">18</span>
+                        <span class="has-lesson" data-lessons="1">19</span>
+                        <span class="has-lesson" data-lessons="3">20</span>
+                        <span>21</span>
+                        <span class="has-lesson" data-lessons="2">22</span>
+                        <span>23</span>
+                        <span class="has-lesson" data-lessons="1">24</span>
+                        <span>25</span>
+                        <span class="has-lesson" data-lessons="2">26</span>
+                        <span class="has-lesson" data-lessons="1">27</span>
+                        <span>28</span>
+                        <span class="has-lesson" data-lessons="3">29</span>
+                        <span>30</span>
+                        <span class="has-lesson" data-lessons="1">31</span>
+                    </div>
+                </div>
+                <div class="upcoming-lessons">
+                    <h3>📅 今日の授業</h3>
+                    <div class="upcoming-lesson-card">
+                        <div class="lesson-time">15:00〜16:00</div>
+                        <div class="lesson-info">
+                            <span class="lesson-title">化学実験ラボ：色の変化を観察しよう</span>
+                            <span class="lesson-teacher">👨‍🏫 山田先生</span>
+                        </div>
+                        <span class="lesson-type-tag">🧪 実験型</span>
+                    </div>
+                    <div class="upcoming-lesson-card">
+                        <div class="lesson-time">17:00〜18:00</div>
+                        <div class="lesson-info">
+                            <span class="lesson-title">図形で学ぶ数学パズル</span>
+                            <span class="lesson-teacher">👨‍🏫 佐藤先生</span>
+                        </div>
+                        <span class="lesson-type-tag">📊 論理型</span>
+                    </div>
+                    <a href="live-select.html" class="btn btn-outline btn-sm">すべての授業を見る →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Features</span>
+                <h2 class="section-title">Tanetの<span class="gradient-text">3つの特徴</span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <span>🎯</span>
+                    </div>
+                    <h3>パーソナライズ診断</h3>
+                    <p>15問の質問から興味・学習スタイル・課題を分析し、12タイプに分類。あなただけの学習戦略を提案します。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <span>🎬</span>
+                    </div>
+                    <h3>体験型ライブ授業</h3>
+                    <p>一方通行の授業はもう終わり。チャット、質問キュー、クイズで双方向のインタラクティブな学習体験を。</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <div class="icon-bg"></div>
+                        <span>🏆</span>
+                    </div>
+                    <h3>ポイント＆報酬</h3>
+                    <p>授業参加やピアメンター活動でポイントゲット。貯めたポイントは特典と交換可能。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning Types Section -->
+    <section class="learning-types">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">12 Types</span>
+                <h2 class="section-title">12の<span class="gradient-text">学習タイプ</span></h2>
+                <p class="section-description">あなたはどのタイプ？診断してあなたに最適な学習方法を見つけよう</p>
+            </div>
+            <div class="types-grid">
+                <div class="type-card type-experimenter">
+                    <span class="type-icon">🧪</span>
+                    <h4>実験・体感型</h4>
+                    <p>クリエイター</p>
+                </div>
+                <div class="type-card type-analyst">
+                    <span class="type-icon">📊</span>
+                    <h4>分析・論理型</h4>
+                    <p>リサーチャー</p>
+                </div>
+                <div class="type-card type-visual">
+                    <span class="type-icon">🎨</span>
+                    <h4>視覚・映像型</h4>
+                    <p>ラーナー</p>
+                </div>
+                <div class="type-card type-auditory">
+                    <span class="type-icon">💬</span>
+                    <h4>聴覚・対話型</h4>
+                    <p>コミュニケーター</p>
+                </div>
+                <div class="type-card type-reader">
+                    <span class="type-icon">📖</span>
+                    <h4>読書・文章型</h4>
+                    <p>スカラー</p>
+                </div>
+                <div class="type-card type-practical">
+                    <span class="type-icon">🔧</span>
+                    <h4>実践・応用型</h4>
+                    <p>プラクティショナー</p>
+                </div>
+                <div class="type-card type-collaborative">
+                    <span class="type-icon">👥</span>
+                    <h4>協調・チーム型</h4>
+                    <p>コラボレーター</p>
+                </div>
+                <div class="type-card type-independent">
+                    <span class="type-icon">🧭</span>
+                    <h4>独立・自律型</h4>
+                    <p>エクスプローラー</p>
+                </div>
+                <div class="type-card type-goal">
+                    <span class="type-icon">🎯</span>
+                    <h4>目標・達成型</h4>
+                    <p>ストライバー</p>
+                </div>
+                <div class="type-card type-curious">
+                    <span class="type-icon">🔍</span>
+                    <h4>好奇心・発見型</h4>
+                    <p>アドベンチャラー</p>
+                </div>
+                <div class="type-card type-repetitive">
+                    <span class="type-icon">🔄</span>
+                    <h4>反復・定着型</h4>
+                    <p>マスター</p>
+                </div>
+                <div class="type-card type-intuitive">
+                    <span class="type-icon">💡</span>
+                    <h4>直感・創造型</h4>
+                    <p>イノベーター</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">How It Works</span>
+                <h2 class="section-title">かんたん<span class="gradient-text">3ステップ</span></h2>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>15問に回答</h3>
+                        <p>興味・学習スタイル・課題についての質問に回答します。約3分で完了。</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>タイプ判定</h3>
+                        <p>AIが回答を分析し、12の学習タイプからあなたに最も適したタイプを判定。</p>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>授業をスタート</h3>
+                        <p>あなたのタイプに合ったおすすめ授業で、効率的に学習をスタートしましょう。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2>今すぐ、あなたの学習スタイルを発見しよう</h2>
+                    <p>無料診断で最適な学び方を見つけて、効率的な学習をスタート</p>
+                    <a href="diagnosis.html" class="btn btn-large btn-white">
+                        <span>無料で診断する</span>
+                        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">📚</span>
+                        <span class="logo-text">Tanet</span>
+                    </a>
+                    <p>体験型オンライン学習で、もっと楽しく効率的に学べる。</p>
+                </div>
+                <div class="footer-links">
+                    <h4>サービス</h4>
+                    <a href="diagnosis.html">学習診断</a>
+                    <a href="live-select.html">ライブ授業</a>
+                    <a href="dashboard.html">マイページ</a>
+                    <a href="forum.html">フォーラム</a>
+                </div>
+                <div class="footer-links">
+                    <h4>サポート</h4>
+                    <a href="#">ヘルプ</a>
+                    <a href="#">お問い合わせ</a>
+                    <a href="#">よくある質問</a>
+                </div>
+                <div class="footer-links">
+                    <h4>会社情報</h4>
+                    <a href="#">運営会社</a>
+                    <a href="#">プライバシーポリシー</a>
+                    <a href="#">利用規約</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tanet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

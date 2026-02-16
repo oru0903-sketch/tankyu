@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="マイページ - あなたの学習進捗と成果を確認">
+    <title>マイページ | Tanet</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">📚</span>
+                <span class="logo-text">Tanet</span>
+            </a>
+            <div class="nav-links">
+                <a href="live-select.html" class="nav-link">ライブ授業</a>
+                <a href="video.html" class="nav-link">動画授業</a>
+                <a href="contest.html" class="nav-link">コンテスト</a>
+                <a href="forum.html" class="nav-link">フォーラム</a>
+                <a href="dashboard.html" class="nav-link active">マイページ</a>
+            </div>
+            <div class="nav-user">
+                <span class="user-avatar">👤</span>
+                <span class="user-name">ゲスト</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard Container -->
+    <div class="dashboard-container container">
+        <!-- User Profile Header -->
+        <div class="profile-header">
+            <div class="profile-avatar-section">
+                <div class="profile-avatar">🧑‍🎓</div>
+                <div class="profile-info">
+                    <h1 class="profile-name">ゲストユーザー</h1>
+                    <p class="profile-type">🧪 実験・体感型（クリエイター）</p>
+                </div>
+            </div>
+            <div class="profile-stats">
+                <div class="stat-card">
+                    <span class="stat-value">12</span>
+                    <span class="stat-label">受講した授業</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">1,250</span>
+                    <span class="stat-label">ポイント</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-value">🎖️</span>
+                    <span class="stat-label">シルバーランク</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <a href="live-select.html" class="action-card">
+                <span class="action-icon">🎬</span>
+                <span class="action-label">ライブ授業に参加</span>
+            </a>
+            <a href="points.html?tab=exchange" class="action-card">
+                <span class="action-icon">🎁</span>
+                <span class="action-label">ポイント交換</span>
+            </a>
+            <a href="diagnosis.html" class="action-card">
+                <span class="action-icon">🔄</span>
+                <span class="action-label">診断をやり直す</span>
+            </a>
+        </div>
+
+        <!-- Dashboard Grid -->
+        <div class="dashboard-grid">
+            <!-- Recent Activity -->
+            <div class="dashboard-card">
+                <h2 class="card-title">📊 最近のアクティビティ</h2>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-icon">🎬</span>
+                        <div class="activity-content">
+                            <span class="activity-action">ライブ授業に参加しました</span>
+                            <span class="activity-meta">化学実験ラボ • 今日</span>
+                        </div>
+                        <span class="activity-points">+50pt</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-icon">✅</span>
+                        <div class="activity-content">
+                            <span class="activity-action">クイズに正解しました</span>
+                            <span class="activity-meta">化学実験ラボ • 今日</span>
+                        </div>
+                        <span class="activity-points">+20pt</span>
+                    </div>
+                    <span class="activity-points">+20pt</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommended Classes -->
+        <div class="dashboard-card">
+            <h2 class="card-title">🎯 おすすめの授業</h2>
+            <div class="recommended-list">
+                <div class="recommended-item">
+                    <div class="recommended-icon">🔬</div>
+                    <div class="recommended-content">
+                        <span class="recommended-title">物理実験：力と運動</span>
+                        <span class="recommended-meta">明日 15:00〜 • 実験型</span>
+                    </div>
+                </div>
+                <div class="recommended-item">
+                    <div class="recommended-icon">🧬</div>
+                    <div class="recommended-content">
+                        <span class="recommended-title">生物：細胞を観察しよう</span>
+                        <span class="recommended-meta">1/20 16:00〜 • 実験型</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Tanet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
